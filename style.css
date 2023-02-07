@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.general {
+  background-image: url(./images/background-desktop.jpg);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.plane {
+  display: flex;
+  max-width: 60%;
+  height: 60%;
+  position: relative;
+  top: 230px;
+  left: 400px;
+  animation-name: planeMove;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  z-index: 0;
+}
+.plane_img {
+  background-repeat: no-repeat;
+}
+.door {
+  display: flex;
+  z-index: 1;
+  position: relative;
+  width: 47%;
+  height: 47%;
+  right: 915px;
+  top: 100px;
+  animation-name: doorMove;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.door_img {
+  background-repeat: no-repeat;
+  animation-name: doorHide;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes planeMove {
+  from {
+    left: 400px;
+    top: 230px;
+  }
+  to {
+    left: 0px;
+    top: 230px;
+  }
+}
+@keyframes doorMove {
+  from {
+    right: 915px;
+    top: 100px;
+  }
+  to {
+    right: 915px;
+    top: 100px;
+  }
+}
+@keyframes doorHide {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+.manOne {
+  display: flex;
+  position: relative;
+  visibility: hidden;
+  right: 100px;
+  top: 40px;
+  animation: manShow 1s ease 3s normal forwards, manMove 1s ease 3.5s forwards,
+    manJump 0.8s ease 4.5s 2 forwards, manHide 1s ease 5s forwards;
+  width: 80%;
+  height: 80%;
+}
+.manOne_img {
+  background-repeat: no-repeat;
+}
+
+@keyframes manShow {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes manMove {
+  from {
+    height: 80%;
+    width: 80%;
+    right: 100px;
+    top: 40px;
+  }
+  to {
+    height: 190%;
+    width: 190%;
+    top: -50px;
+    right: -30px;
+  }
+}
+@keyframes manJump {
+  0% {
+    top: -50px;
+  }
+  50% {
+    top: -80px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+@keyframes manHide {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+.manTwo {
+  visibility: hidden;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  animation: manShow 1s ease 6s normal forwards,
+    manShowTwo 1s ease 6s normal forwards, manTwoJump 0.8s ease 6.5s 2 forwards;
+}
+
+@keyframes manShowTwo {
+  0%,
+  100% {
+    right: 275px;
+    top: -90px;
+    width: 210%;
+    height: 210%;
+  }
+}
+@keyframes manTwoJump {
+  0% {
+    top: -90px;
+  }
+  50% {
+    top: -120px;
+  }
+  100% {
+    top: -90px;
+  }
+}
+.confetti {
+  visibility: hidden;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  width: 300%;
+  height: 200%;
+  animation: confettiShow 0.5s ease 8s forwards;
+}
+.confetti_img {
+  background-repeat: no-repeat;
+}
+@keyframes confettiShow {
+  0%,
+  100% {
+    visibility: visible;
+    top: -350px;
+    left: -2000px;
+  }
+}
+.coin_one {
+  height: 5vh;
+  width: 5%;
+  display: flex;
+  position: relative;
+  left: -850px;
+  animation: coinMoveOne 1s ease 8.2s forwards;
+  visibility: hidden;
+}
+.coin_two {
+  height: 5vh;
+  width: 5%;
+  display: flex;
+  position: relative;
+  left: 150px;
+  animation: coinMoveFive 1s ease 8.2s forwards;
+  visibility: hidden;
+}
+.coin_three {
+  height: 5vh;
+  width: 5%;
+  display: flex;
+  position: relative;
+  left: -750px;
+  animation: coinMoveThree 1s ease 8.2s forwards;
+  visibility: hidden;
+}
+.coin_four {
+  height: 3.5vh;
+  width: 3.5%;
+  display: flex;
+  position: relative;
+  left: -550px;
+  animation: coinMoveFour 1s ease 8.2s forwards;
+  visibility: hidden;
+}
+.coin_five {
+  height: 5vh;
+  width: 5%;
+  display: flex;
+  position: relative;
+  left: -350px;
+  animation: coinMoveSix 1s ease 8.2s forwards;
+  visibility: hidden;
+}
+.coin_six {
+  height: 5vh;
+  width: 5%;
+  display: flex;
+  position: relative;
+  left: -750px;
+  animation: coinMoveTwo 1s ease 8.2s forwards;
+  visibility: hidden;
+}
+@keyframes coinMoveOne {
+  from {
+    top: 0px;
+    visibility: hidden;
+  }
+  to {
+    top: 400px;
+    visibility: visible;
+  }
+}
+@keyframes coinMoveTwo {
+  from {
+    top: 0px;
+    visibility: hidden;
+  }
+  to {
+    top: 600px;
+    visibility: visible;
+  }
+}
+@keyframes coinMoveThree {
+  from {
+    top: 0px;
+    visibility: hidden;
+  }
+  to {
+    top: 350px;
+    visibility: visible;
+  }
+}
+@keyframes coinMoveFour {
+  from {
+    top: 0px;
+    visibility: hidden;
+  }
+  to {
+    top: 215px;
+    visibility: visible;
+  }
+}
+@keyframes coinMoveFive {
+  from {
+    top: 0px;
+    visibility: hidden;
+  }
+  to {
+    top: 200px;
+    visibility: visible;
+  }
+}
+@keyframes coinMoveSix {
+  from {
+    top: 0px;
+    visibility: hidden;
+  }
+  to {
+    top: 550px;
+    visibility: visible;
+  }
+}
